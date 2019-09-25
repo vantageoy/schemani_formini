@@ -1,6 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:schemani/schemani.dart';
-
 import 'package:schemani_formini/schemani_formini.dart';
 
 void main() {
@@ -10,7 +9,7 @@ void main() {
     });
     const validator = SchemaniForminiValidator(schema);
 
-    final errors = validator.validate({ 'email': 'foo' });
+    final errors = validator.validate({'email': 'foo'});
 
     expect(errors['email'] is Exception, true);
   });
