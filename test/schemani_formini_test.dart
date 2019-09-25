@@ -1,13 +1,17 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:schemani/schemani.dart';
 
 import 'package:schemani_formini/schemani_formini.dart';
 
 void main() {
-  test('adds one to input values', () {
-    final calculator = Calculator();
-    expect(calculator.addOne(2), 3);
-    expect(calculator.addOne(-7), -6);
-    expect(calculator.addOne(0), 1);
-    expect(() => calculator.addOne(null), throwsNoSuchMethodError);
+  test('it returns the exceptions', () {
+    const schema = MapSchema({
+      'email': [Required(), Email()],
+    });
+    const validator = SchemaniForminiValidator(schema);
+
+    final errors = validator.validate({ 'email': 'foo' });
+
+    expect(errors['email'] is Exception, true);
   });
 }
