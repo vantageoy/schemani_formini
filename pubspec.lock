@@ -56,11 +56,9 @@ packages:
   formini:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "48dbb11a82eadddf9e28132f42c8d11fa01db289"
-      url: "git://github.com/vantageoy/formini.git"
-    source: git
+      name: formini
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.0.1-alpha.1"
   matcher:
     dependency: transitive
@@ -114,12 +112,10 @@ packages:
   schemani:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "7eba12cd37d9cbcc17b3fd87b7bda8bc61579456"
-      url: "git://github.com/vantageoy/schemani.git"
-    source: git
-    version: "0.0.1-alpha.1"
+      name: schemani
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.1-alpha.2"
   sky_engine:
     dependency: transitive
     description: flutter

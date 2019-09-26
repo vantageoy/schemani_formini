@@ -10,13 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  schemani:
-    git: git://github.com/vantageoy/schemani.git
-  formini:
-    git: git://github.com/vantageoy/formini.git
+  schemani: ^0.0.1-alpha
+  formini: ^0.0.1-alpha
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-flutter:
