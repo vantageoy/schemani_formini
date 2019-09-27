@@ -56,9 +56,9 @@ packages:
   formini:
     dependency: "direct main"
     description:
-      name: formini
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "../formini"
+      relative: true
+    source: path
     version: "0.0.1-alpha.1"
   matcher:
     dependency: transitive
@@ -112,10 +112,10 @@ packages:
   schemani:
     dependency: "direct main"
     description:
-      name: schemani
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.1-alpha.2"
+      path: "../schemani"
+      relative: true
+    source: path
+    version: "0.0.1-alpha.3"
   sky_engine:
     dependency: transitive
     description: flutter

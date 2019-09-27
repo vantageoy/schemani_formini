@@ -11,9 +11,22 @@ class SchemaniForminiValidator implements Validator {
     try {
       schema.validate(values);
     } on MapValidationException catch (exception) {
-      return exception.exceptions;
+      return _transform(exception);
     }
 
-    return {};
+    return null;
+  }
+
+  /// Transform the given [ValidationException] exception into a [ForminiException].
+  ///
+  /// @todo It should keep the original exception and not make a new one. How do?
+  ForminiException _transform(ValidationException exception) {
+    if (exception is MapValidationException) {
+      return ForminiException.map(exception.exceptions.map(
+        (field, exception) => MapEntry(field, _transform(exception)),
+      ));
+    }
+
+    return ForminiException(message: exception.toString());
   }
 }

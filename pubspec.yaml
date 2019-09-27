@@ -10,8 +10,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  schemani: ^0.0.1-alpha
-  formini: ^0.0.1-alpha
+  schemani: 
+    path: '../schemani'
+  formini:  
+    path: '../formini'
 
 dev_dependencies:
   flutter_test:

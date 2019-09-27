@@ -13,4 +13,17 @@ void main() {
 
     expect(errors['email'] is Exception, true);
   });
+
+  test('it returns nested exceptions', () {
+    const schema = MapSchema({
+      'profile': MapSchema({
+        'avatar': [Required(), Email()],
+      }),
+    });
+    const validator = SchemaniForminiValidator(schema);
+
+    final errors = validator.validate({});
+
+    expect(errors['profile'] is Exception, true);
+  });
 }
